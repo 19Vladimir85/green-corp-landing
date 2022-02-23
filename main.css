@@ -4,12 +4,12 @@ body {
   margin: 0;
 }
 
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-  }
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
 
   .header__logo {
     height: 30px;
@@ -50,7 +50,7 @@ body {
         display: flex;
         justify-content: space-around;
         align-items: center;
-        padding-top: 115px;
+        padding-top: 200px;
         padding-bottom: 115px;
         position: relative;
       }
@@ -353,10 +353,17 @@ body {
       position: absolute;
    }
    header {
-    position: sticky;
-    top: 0;
-    background: white;
- }
+    position: fixed;
+    background: none;
+    left: 0;
+    right: 0;
+    transition: box-shadow, background-color .25s ease;
+  }
+   
+  .header__scrolled {
+    background-color: white;
+    box-shadow: 0 12px 34px -11px rgb(65 62 101 / 10%);
+  }
  header {
   z-index: 1;
 }
